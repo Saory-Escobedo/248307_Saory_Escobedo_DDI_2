@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog :D</title>
+<link rel="stylesheet" href="CSS/estilo.css">
+<link rel="icon" type="icon" href="Recursos/iconoPrincipal.ico">
+</head>
+<body>
+
+<!--Aca empieza el menu-->
+<nav id="menu" class="hidden">
+<div>
+<button onclick="mostrar('inicio')">Inicio</button>
+<button id="btnAdmin" class="hidden" onclick="mostrar('admin')">Admin</button>
+<button onclick="mostrar('jsonView')" id="btnJson" class="hidden">Ver JSON</button>
+</div>
+
+<!--boton para volverse admin-->
+<button id="btnRol" onclick="toggleRol()">Volverme Administrador</button>
+
+<!--Aca esta la edicion de los perfiles-->
+<div class="profile">
+<img id="fotoPerfil" width="40" height="40">
+<div class="dropdown">
+<input id="editNombre" placeholder="Nombre"><br>
+<input id="editCorreo" placeholder="Correo"><br>
+<input id="editPass" type="password" placeholder="Nueva contraseña"><br>
+<input id="editFoto" type="file"><br>
+<button onclick="editarPerfil()">Guardar</button>
+</div>
+</div>
+
+<!--Aca esta el cerrar sesion-->
+<button onclick="logout()">Salir</button>
+</nav>
+
+<div class="container">
+
+<!--Aca empieza el registro-->
+<div id="registro">
+    <h2>Registro</h2>
+    <input id="regNombre" placeholder="Nombre"><br>
+    <input id="regCorreo" placeholder="Correo"><br>
+    <input id="regPass" type="password" placeholder="Contraseña"><br>
+<input id="regPass2" type="password" placeholder="Confirmar contraseña"><br>
+<h5>Ingresa una foto de perfil:</h5>
+<input id="regFoto" type="file" class="espacio"><br>
+<br>
+<button onclick="registrar()">Registrarse</button>
+<p>¿Ya tienes cuenta? <a href="#" onclick="irLogin()">Inicia sesión</a></p>
+</div>
+
+<!--Aca empieza el inicio de sesion-->
+<div id="vistaLogin" class="hidden">
+<h2>Iniciar sesión</h2>
+<input id="logCorreo" placeholder="Correo"><br>
+<input id="logPass" type="password" placeholder="Contraseña"><br>
+<button onclick="login()">Entrar</button>
+<p>¿No tienes cuenta? <a href="#" onclick="irRegistro()">Regístrate</a></p>
+</div>
+
+<div id="app" class="hidden">
+
+  
+<!--Aca esta el inicio del inicio literalmente ajajaja, lo que se ve en la pagina principal
+o si lo quieres mas especifico lo que ve el usuario despues de registrarse pff jajajaja-->  
+<div id="inicio">
+
+<!--Aca ponemos el banner!!!-->
+<div class="Banner">
+    <img src="Recursos/Fondo.png">
+    <center>
+        <h2 id="bienvenida"></h2><!--editar ahorita!!!!!-->
+        <h3>Preparate para ver... </h3>
+        <h2>MIS CANCIONES FAVORITAS Y MI OPINIÓN DE ELLAS >:D</h2>   
+    </center>
+</div>
+
+
+<div id="productos"></div>
+</div>
+
+<!--la aarea oculta para visitantes, la de subir archivos-->
+<div id="admin" class="hidden">
+<h3>Subir Archivo</h3>
+<input id="archivo" type="file"><br>
+<input id="titulo" placeholder="Título"><br>
+<textarea id="descripcion" placeholder="Descripción"></textarea><br> <!--se refleja como descripcion en la targeta/ area de la "publicacion"-->
+<input id="categoria" placeholder="Categoría"><br>
+<input id="autor" placeholder="Autor"><br> <!---no perder-->
+<input id="fecha" placeholder="Fecha"><br> <!---no perder-->
+<button onclick="subirArchivo()">Guardar</button>
+</div>
+
+<div id="jsonView" class="hidden">
+    <button onclick="resetearTodo()">Resetear JSON</button>
+<h3>Vista JSON Completa</h3>
+<pre id="jsonData"></pre>
+</div>
+
+</div>
+
+</div>
+
+<script src="JS/script.js"></script>
+</body>
+</html>

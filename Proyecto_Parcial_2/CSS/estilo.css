@@ -1,0 +1,100 @@
+body{
+    font-family:Arial;
+    background:#1e1e2f;
+    color:white;
+    margin:0;
+}
+
+nav{ 
+    position:sticky;
+    top:0;
+    background:#111;
+    padding:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav button{
+    background:#111;
+    color:white;
+    border:none;
+    padding:10px;
+    font-size: 1.2em;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor:pointer;
+}
+
+
+.profile{
+    position:relative;
+    cursor:pointer;
+}
+
+.dropdown{
+    position:absolute;
+    top:40px;
+    right:0;
+    background:#2a2a40;
+    padding:10px;
+    border-radius:10px;
+    display:none;
+}
+
+.profile:hover .dropdown{
+    display:block;
+}
+
+.container{
+    padding:20px;
+}
+
+input,button,textarea{
+    padding:10px;
+    margin:5px;
+    border:none;
+    border-radius:5px;
+}
+
+.card{
+    background:#2a2a40;
+    padding:15px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.hidden{
+    display:none;
+}
+
+.profile img{
+    border-radius:50%;
+}
+
+.espacio{
+    margin-top: -10px;
+}
+
+a{
+    text-decoration:none;
+    color: aqua ;
+}
+
+.Banner img{
+    width:100%;
+    margin:-2px;
+    padding:0;
+    z-index:-2;
+}
+
+center{
+    margin-top:-600px;
+    margin-bottom:300px;
+}
+
+center h2, center h3{
+    font-size:3.5em;
+    color:#2a2a40;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
